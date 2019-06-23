@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalabel=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Send Form</title>
+    <link rel="stylesheet" href="/dist/css/kdev-sendForm.css">
+</head>
+<body>
+<h1>SendForm</h1>
+<form action="/form.php" method="post">
+
+    <div class="form-item">
+        <label>Name
+            <br>
+            <input type="text" name="name">
+        </label>
+    </div>
+    <div class="form-item">
+
+        <label>Email
+            <br>
+            <input type="email" name="email"><br>
+        </label>
+    </div>
+    <div class="form-item">
+        <label>Textarea<br>
+            <input type="text" name="text"><br>
+        </label>
+    </div>
+    <div class="form-item">
+        <label> Radio 1
+            <input type="radio" name="radio" value="1">
+        </label><br>
+        <label> Radio 2
+            <input type="radio" name="radio" value="2">
+        </label><br>
+        <label> Radio 3
+            <input type="radio" name="radio" value="3">
+        </label><br>
+
+    </div>
+    <div class="form-item">
+        <label> Сheckbox 1
+            <input type="checkbox" name="checkbox" value="1">
+        </label><br>
+        <label> Сheckbox 2
+            <input type="checkbox" name="checkbox" value="2">
+        </label><br>
+        <label> Сheckbox 3
+            <input type="checkbox" name="checkbox" value="3">
+        </label><br>
+
+    </div>
+    <div class="form-item">
+        <input type="button" class="send-form" value="send">
+    </div>
+
+</form>
+<script src="/lib/jquery.3.3.1.min.js"></script>
+<script src="/dist/js/kdev-sendForm.js"></script>
+<script>
+    $('.send-form').kdevSendForm();
+</script>
+</body>
+</html>
