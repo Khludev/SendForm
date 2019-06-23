@@ -61,7 +61,7 @@ $response = [
             ],
         'msg' => 'Заполните все обязательные поля'
     ];
-	exit(json_encode($response));
+exit(json_encode($response));
 ```
 В етом случае под всеми полями для которых мы вернули ошибки отобразяться поля с ошибками.
 
@@ -86,7 +86,7 @@ $response = [
         'status' => 'msg',
         'msg' => 'Заполните все обязательные поля'
     ];
-	exit(json_encode($response));
+exit(json_encode($response));
 ```
     
 
@@ -115,5 +115,5 @@ $response = [
         'status' => 'callback',
         'function' => 'functionName'
     ];
-	exit(json_encode($response));
+exit(json_encode($response));
 ```
