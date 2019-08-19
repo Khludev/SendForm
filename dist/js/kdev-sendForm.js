@@ -40,7 +40,7 @@
 
                 return $(clickBut).each(function () {
                     $(this).click(function (e) {
-                        methods.kdevSendForm($(this));
+                        methods.kdevSendForm($(this), e);
 
                     });
                 });
@@ -133,7 +133,9 @@
                 }
             },
             //Получаем данные формы и отправляем на сервер
-            kdevSendForm: function (e) {
+            kdevSendForm: function (e, jsObj) {
+                jsObj.preventDefault();
+
                 data.htmlForm = e.closest('form');
                 data.formData = data.htmlForm.serialize();
                 settings.url = data.htmlForm.attr("action");
