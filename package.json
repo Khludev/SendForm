@@ -1,0 +1,32 @@
+{
+  "name": "kdev-sendform",
+  "version": "0.0.11",
+  "description": "Отправка и обработка форм",
+  "main": "index.js",
+  "directories": {
+    "lib": "dist"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khludev/SendForm.git"
+  },
+  "keywords": [
+    "html",
+    "form",
+    "ajax",
+    "k-dev",
+    "khludev"
+  ],
+  "author": "khludev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Khludev/SendForm/issues"
+  },
+  "homepage": "https://github.com/Khludev/SendForm#readme",
+  "devDependencies": {
+    "jquery": ">=3"
+  }
+}
