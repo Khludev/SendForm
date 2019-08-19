@@ -1,0 +1,26 @@
+{
+  "name": "kdev-sendform",
+  "description": "Отправка и обработка форм",
+  "main": "index.js",
+  "authors": [
+    "khludev"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "html",
+    "form",
+    "ajax",
+    "k-dev",
+    "khludev"
+  ],
+  "homepage": "https://github.com/Khludev/SendForm",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    ".gitignore",
+    "package-lock.json",
+    "test",
+    "tests"
+  ]
+}
