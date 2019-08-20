@@ -54,7 +54,7 @@ $('.send-form').kdevSendForm();
 ```php
 $response = [
         'status' => 'errorValid',
-        'error' =>
+        'errors' =>
             [
                 ['name'] => 'Поле "Name" обязательно к заполнению',
                 ['email'] => 'Поле "Email" обязательно к заполнению'
@@ -71,7 +71,7 @@ exit(json_encode($response));
 ```php
 $response = [
         'status' => 'errorValid',
-        'error' =>
+        'errors' =>
             [
                 ['name'] => 'Поле "Name" обязательно к заполнению',
                 ['email'] => 'Поле "Email" обязательно к заполнению'
@@ -102,7 +102,7 @@ exit(json_encode($response));
 
 ```php
 $response = [
-        'status' => 'error',
+        'status' => 'errors',
         'msg' => 'Непредвиденная ошибка!'
     ];
 exit(json_encode($response));

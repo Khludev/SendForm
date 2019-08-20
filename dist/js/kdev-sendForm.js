@@ -170,7 +170,7 @@
 
                             //Вызов функции callback
                             case STATUS_CALLBACK:
-                                window[result.function]();
+                                window[result.function](result);
                                 break;
 
                             //Выводим сообщение
