@@ -2,7 +2,6 @@
   "name": "kdev-sendform",
   "description": "Отправка и обработка форм",
   "main": "dist/js/kdev-sendForm.js",
-  "version": "0.0.14",
   "authors": [
     "khludev"
   ],
