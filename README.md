@@ -30,7 +30,7 @@
 
 ##### PACKAGE MANAGERS
 ###### Bower
-` bower install --save slick-carousel `
+`bower install --save kdev-sendform`
 
 ###### NPM
 `npm i kdev-sendform`
