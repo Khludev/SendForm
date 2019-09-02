@@ -29,7 +29,8 @@
         STATUS_ERROR_VALID = 'errorValid',
         STATUS_CALLBACK = 'callback',
         STATUS_MSG = 'msg',
-        STATUS_REDIRECT = 'redirect'
+        STATUS_REDIRECT = 'redirect',
+        STATUS_CONTENT = 'content'
     ;
 
     var
@@ -77,6 +78,16 @@
                     }
                 }
             },
+            //Вставить html. Принимаем jquery метод before, html или другие
+            insertContent: function (data) {
+                let method = data.method ? data.method : 'html';
+                try {
+                    $(data.selector)[method](data.content)
+
+                } catch (e) {
+                    this.error(e);
+                }
+            },
             //Показать поп-ап уведомление
             pop: function ($htmMsg) {
                 if (!$htmMsg)
@@ -114,8 +125,6 @@
 
                             return this.pop(data.resultServer.msg);
 
-                            break;
-
                         //Вывод поп-ап для статус STATUS_ERROR_VALID и STATUS_ERROR
                         case STATUS_ERROR:
                         case STATUS_ERROR_VALID:
@@ -128,7 +137,6 @@
 
                             return this.pop(data.resultServer.msg);
 
-                            break;
                     }
                 }
             },
@@ -183,23 +191,29 @@
                                 window.location = result.url;
                                 break;
 
+                            //Вставить html елемент 
+                            case STATUS_CONTENT:
+                                self.insertContent(result);
+                                break;
+
                         }
                     }
                 });
                 return false;
             },
+            error: function (e) {
+                console.log('kdev-sendForm error -> ', e.message, e.name);
+            }
 
         };
 
     $.fn.kdevSendForm = function (action) {
         if (methods[action]) {
             return methods[action].apply(this, Array.prototype.slice.call(settings, 1))
-        }
-        else if (typeof action === 'object' || !action) {
+        } else if (typeof action === 'object' || !action) {
             return methods.init(this, settings)
 
-        }
-        else {
+        } else {
             console.log('Error not `' + action + '` method from plugin kdevSendForm');
         }
     }

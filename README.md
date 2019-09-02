@@ -127,3 +127,17 @@ $response = [
     ];
 exit(json_encode($response));
 ```
+
+##### HTML  содержимое
+Мы также можем заменить или вставить html содержимое.
+По умолчанию вызываеться метод  jquery html() но можем вызвать любой другой. Пример выполнения `$(selector)[method](content)`.
+
+Это говорит о том что можна использовать любой метод  jquery для работы с контентом (append(), prepend(), html(),  after(),text(),  ... )
+```php
+$response = [
+			'status' => 'content',
+			'method'=>'append', // не обязательно (по умолчанию html)
+			'selector'=>'#form-block',
+			'content' => '<b>Валидация прошла успешно<b>'
+		];
+```

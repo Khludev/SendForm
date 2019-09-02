@@ -41,5 +41,13 @@ if (!empty($_POST)) {
             ];
     }
 
+//    $response = [
+//        'status' => 'content',
+//        'method'=>'html', // по умолчанию html
+//        'selector'=>'form',
+//        'content' => '<b>Валидация прошла успешно<b>'
+//
+//    ];
+
     exit(json_encode($response));
 }
