@@ -135,9 +135,9 @@ exit(json_encode($response));
 Это говорит о том что можна использовать любой метод  jquery для работы с контентом (append(), prepend(), html(),  after(),text(),  ... )
 ```php
 $response = [
-			'status' => 'content',
-			'method'=>'append', // не обязательно (по умолчанию html)
-			'selector'=>'#form-block',
-			'content' => '<b>Валидация прошла успешно<b>'
-		];
+        'status' => 'content',
+        'method' => 'append', // не обязательно (по умолчанию html)
+        'selector' => '#form-block',
+        'content' => '<b>Валидация прошла успешно<b>'
+    ];
 ```
