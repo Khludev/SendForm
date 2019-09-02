@@ -5,7 +5,7 @@
             //Класс для врапера ошибок валидации
             errorClass: 'error-valid',
             //Время отображения ошибки ms
-            popTime: 4000,
+            popTime: 44000,
             //Елемент для вывода ошибок валидации
             wrapElement: 'span',
             //Метод отправки формы по умолчанию
@@ -137,6 +137,13 @@
 
                             return this.pop(data.resultServer.msg);
 
+                        case 'msg':
+                            //Удлим все классы и добавим нужный
+                            data.sendInfo.removeClass();
+                            data.sendInfo.addClass(STATUS_MSG);
+
+                            return this.pop(data.resultServer.msg);
+
                     }
                 }
             },
@@ -163,7 +170,7 @@
                         switch (result.status) {
                             //Уведомление об ошибки выполнении или "Error!" по умолчанию
                             case STATUS_ERROR:
-                                this.pop();
+                                self.pop();
                                 break;
 
                             //Уведомление об успешном выполнении или "Success!" по умолчанию
@@ -183,7 +190,7 @@
 
                             //Выводим сообщение
                             case STATUS_MSG:
-                                self.pop(result.msg);
+                                self.pop();
                                 break;
 
                             //Редиректим на url

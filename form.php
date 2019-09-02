@@ -35,17 +35,15 @@ if (!empty($_POST)) {
 
         } else
             $response = [
-                'status' => 'success',
+                'status' => 'msg',
                 'msg' => 'Валидация прошла успешно'
 
             ];
     }
 
     $response = [
-        'status' => 'content',
-        'method' => 'append', // не обязательно (по умолчанию html)
-        'selector' => '#form-block',
-        'content' => '<b>Валидация прошла успешно<b>'
+        'status' => 'msg',
+        'msg' => 'Заполните все обязательные поля'
     ];
 
     exit(json_encode($response));
