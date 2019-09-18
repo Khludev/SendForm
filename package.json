@@ -1,6 +1,6 @@
 {
   "name": "kdev-sendform",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Отправка и обработка форм",
   "main": "dist/js/kdev-sendForm.js",
   "directories": {
