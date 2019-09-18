@@ -112,8 +112,18 @@ exit(json_encode($response));
 
 ```php
 $response = [
-        'status' => 'errors',
+        'status' => 'error',
         'msg' => 'Непредвиденная ошибка!'
+    ];
+exit(json_encode($response));
+```
+
+##### Всплывающее сообщение об успешном выполнении
+
+```php
+$response = [
+        'status' => 'success',
+        'msg' => 'Задача выполнена успешно!'
     ];
 exit(json_encode($response));
 ```
