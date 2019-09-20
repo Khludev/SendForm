@@ -30,7 +30,8 @@
         STATUS_CALLBACK = 'callback',
         STATUS_MSG = 'msg',
         STATUS_REDIRECT = 'redirect',
-        STATUS_CONTENT = 'content'
+        STATUS_CONTENT = 'content',
+        STATUS_SCRIPT = 'script'
     ;
 
     var
@@ -201,6 +202,11 @@
                             //Вставить html елемент 
                             case STATUS_CONTENT:
                                 self.insertContent(result);
+                                break;
+
+                            //Выполнить js скрипт (eval)
+                            case STATUS_SCRIPT:
+                                eval(result.script);
                                 break;
 
                         }

@@ -42,8 +42,8 @@ if (!empty($_POST)) {
     }
 
     $response = [
-        'status' => 'msg',
-        'msg' => 'Заполните все обязательные поля'
+        'status' => 'script',
+        'script' => 'alert(32)'
     ];
 
     exit(json_encode($response));
