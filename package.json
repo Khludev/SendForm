@@ -7,7 +7,8 @@
     "lib": "dist"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack && uglifyjs ./dist/js/kdev-sendForm.js -c -m -o ./dist/js/kdev-sendForm.min.js --source-map ./dist/js/kdev-sendForm.min.js.map"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,10 @@
   },
   "homepage": "https://github.com/Khludev/SendForm#readme",
   "devDependencies": {
-    "jquery": ">=3"
-  }
+    "jquery": ">=3",
+    "uglify-js": "^3.6.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {}
 }

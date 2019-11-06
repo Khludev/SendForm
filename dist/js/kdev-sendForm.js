@@ -151,7 +151,7 @@
             //Получаем данные формы и отправляем на сервер
             kdevSendForm: function (e, jsObj) {
                 jsObj.preventDefault();
-
+                 e.prop('disabled', true);
                 data.htmlForm = e.closest('form');
                 data.formData = data.htmlForm.serialize();
                 settings.url = data.htmlForm.attr("action");
@@ -212,6 +212,8 @@
                         }
                     }
                 });
+
+                e.prop('disabled', false);
                 return false;
             },
             error: function (e) {
