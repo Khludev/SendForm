@@ -210,10 +210,10 @@
                                 break;
 
                         }
+                        e.prop('disabled', false);
                     }
                 });
 
-                e.prop('disabled', false);
                 return false;
             },
             error: function (e) {
