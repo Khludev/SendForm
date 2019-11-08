@@ -150,7 +150,7 @@
             },
             //Получаем данные формы и отправляем на сервер
             kdevSendForm: function (e, jsObj) {
-                $(e).css('cursor', 'progress');
+                $(e).css({cursor: 'progress', opacity: 0.6});
                 jsObj.preventDefault();
                 e.prop('disabled', true);
                 data.htmlForm = e.closest('form');
@@ -212,7 +212,7 @@
 
                         }
                         e.prop('disabled', false);
-                        $(e).css('cursor', 'auto');
+                        $(e).css({cursor: 'auto', opacity: 1});
                     }
                 });
 
